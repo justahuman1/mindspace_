@@ -1,1 +1,7 @@
-# Mindspace API
+# Mindspace
+
+## What is Mindspace?
+
+## Quickstart
+
+### Install
