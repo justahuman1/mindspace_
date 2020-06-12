@@ -9,4 +9,3 @@ FROM openjdk:14
 COPY --from=builder /app/target/mindspace.jar /
 EXPOSE 9071
 CMD ["java", "-jar", "/mindspace.jar"]
-
