@@ -10,3 +10,15 @@ services:
       - "5432:5432"
     volumes:
       - ./src/db:/var/lib/postgresql/data
+
+  mindspace_api:
+    build:
+      context: ./src/api
+      dockerfile: Dockerfile
+    command: ["java", "-jar", "/mindspace.jar"]
+    # env_file:
+    #   - ./config/api.env
+    ports:
+      - "9071:9071"
+    depends_on:
+      - mindspace_db
