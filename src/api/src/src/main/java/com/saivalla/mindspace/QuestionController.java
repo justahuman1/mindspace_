@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Question {
+public class QuestionController {
     @RequestMapping(method = RequestMethod.GET, path="/questions")
     public String initialize(){
         return "Question Initializer";

@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Answer {
+public class AnswerController {
     @RequestMapping(method = RequestMethod.GET, path="/answers")
     public String initialize(){
+        System.out.println("DB WORLD!!");
         return "Answer Initializer";
     }
 }
