@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AnswerController {
     @RequestMapping(method = RequestMethod.GET, path="/answers")
     public String initialize(){
-        System.out.println("DB WORLD!!");
         return "Answer Initializer";
     }
 }
