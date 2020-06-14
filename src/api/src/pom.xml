@@ -8,7 +8,7 @@
 		<version>2.3.0.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.saivalla</groupId>
+	<groupId>com.justahuman1</groupId>
 	<artifactId>mindspace</artifactId>
 	<version>0.0.1</version>
 	<name>mindspace</name>

@@ -1,4 +1,4 @@
-package com.saivalla.mindspace;
+package com.justahuman1.mindspace;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

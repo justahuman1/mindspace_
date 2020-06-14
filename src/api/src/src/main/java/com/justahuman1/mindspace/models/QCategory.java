@@ -1,6 +1,6 @@
-package com.saivalla.mindspace.models;
+package com.justahuman1.mindspace.models;
 
-import com.saivalla.mindspace.models.customTypes.PGEnumType;
+import com.justahuman1.mindspace.models.customTypes.PGEnumType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import javax.persistence.*;
@@ -13,10 +13,11 @@ import javax.persistence.*;
 )
 public class QCategory {
     @Id
+    @Column(name = "id")
     public short id;
 
     @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "The representative category of the enumerated ID")
+    @Column(name = "type", columnDefinition = "The representative category of the enumerated ID")
     @Type(type = "pg_enum")
     public CategoryEnum type;
 

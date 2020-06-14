@@ -1,4 +1,4 @@
-package com.saivalla.mindspace.models.customTypes;
+package com.justahuman1.mindspace.models.customTypes;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
