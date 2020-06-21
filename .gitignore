@@ -32,5 +32,5 @@ build/
 
 ### Credentials ###
 .env
-*.env
+api.env
 **/db
