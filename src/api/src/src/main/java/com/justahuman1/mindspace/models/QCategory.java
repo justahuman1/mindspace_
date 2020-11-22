@@ -13,7 +13,7 @@ import javax.persistence.*;
 )
 public class QCategory {
     @Id
-    @Column(name = "id")
+    @Column(name = "qc_id")
     public short id;
 
     @Enumerated(EnumType.STRING)

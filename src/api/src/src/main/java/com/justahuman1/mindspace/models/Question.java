@@ -14,7 +14,7 @@ import java.util.Set;
 @Table(name = "question")
 public class Question {
     @Id
-    @Column(name = "id")
+    @Column(name = "q_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
@@ -27,17 +27,17 @@ public class Question {
         cascade = CascadeType.ALL,  // Cascade delete all categories if orphan
         orphanRemoval = true
     )
-    private List<QCategory> categories = new ArrayList<>();
+    private final List<QCategory> categories = new ArrayList<>();
 
     public void setCategories(QCategory category){
         categories.add(category);
     }
 
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade =  CascadeType.ALL )
     @JoinTable(
-            name = "QuestionAnswer",
-            joinColumns = { @JoinColumn(name = "id") },
-            inverseJoinColumns = { @JoinColumn(name = "id") }
+            name = "questions_answers",
+            joinColumns = { @JoinColumn(name = "q_id") },
+            inverseJoinColumns = { @JoinColumn(name = "a_id") }
     )
-    Set<Answer> projects = new HashSet<>();
+    private Set<Answer> answers = new HashSet<>();
 }

@@ -14,7 +14,7 @@ import java.util.Set;
 @Table(name = "answer")
 public class Answer {
     @Id
-    @Column(name = "id")
+    @Column(name = "a_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
@@ -23,6 +23,6 @@ public class Answer {
     @Size(min = 1, max = 300)
     private String title;
 
-    @ManyToMany(mappedBy = "question")
+    @ManyToMany(mappedBy = "answers")
     private Set<Question> questions = new HashSet<>();
 }
